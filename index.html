@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CoM Interactive Map</title>
+    <script src="main.js" defer></script>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(30, 256px);
+        }
+
+        .grid-wrapper {
+            position: relative;
+        }
+
+        .tile {
+            width: 256px;
+            height: 256px;
+        }
+
+        .overlay {
+            width: 32px;
+            height: 32px;
+            background-size: cover;
+            position: absolute;
+            pointer-events: none; 
+            z-index: 1;
+        }
+        .wood {
+            background-image: url("img/itm_Log1.png"); 
+        }
+
+        .ore {
+            background-image: url("img/itm_Ore1.png"); 
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="grid-wrapper">
+        <div class="grid-container" id="gridContainer"></div>
+    </div>
+
+</body>
+</html>
